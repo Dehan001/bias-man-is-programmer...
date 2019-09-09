@@ -1,5 +1,4 @@
 from __future__ import print_function, division
-import we
 import json
 import numpy as np
 import argparse
@@ -7,6 +6,14 @@ import sys
 if sys.version_info[0] < 3:
     import io
     open = io.open
+
+# When imported from parent directory, "we" is actually debiaswe.
+try:
+    import debiaswe.we as we
+except ImportError:
+    import we
+
+
 """
 Hard-debias embedding
 
