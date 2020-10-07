@@ -3,3 +3,5 @@
 # except .gitignore
 !.gitignore
 
+# except the data
+!w2v_gnews_small.txt
